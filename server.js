@@ -16,11 +16,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/v1/api/users", require("./routes/userRoutes"));
 app.use("/v1/api/tickets", require("./routes/ticketRoutes"));
 
-// Routes
-app.get("/v1/api/users", (req, res) => {
-  res.status(200).json({ message: "Welcome to the Support Desk API" });
-});
-
 //For returning JSON error message
 app.use(errorHandler);
 
