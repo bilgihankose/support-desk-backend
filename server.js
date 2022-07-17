@@ -14,6 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use("/v1/api/users", require("./routes/userRoutes"));
+app.use("/v1/api/tickets", require("./routes/ticketRoutes"));
 
 // Routes
 app.get("/v1/api/users", (req, res) => {
